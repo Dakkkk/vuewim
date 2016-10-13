@@ -6,6 +6,28 @@
 	.panel-body {
 		font-weight: 300;
 	}
+	
+	.left-panel {
+	    .v-enter {
+         animation: fadeInLeft 0.8s;
+        }
+		v-leave {
+         animation: fadeOutLeft 0.8s;
+        }
+	}
+	
+	.right-panel { 
+	    .v-enter, .v-enter-active {
+        animation: fadeInRight 0.8s;
+        }
+	    .v-leave-active {
+         animation: fadeOutRight 0.8s;
+        }
+	}
+	
+	.v-leave {
+        animation: fadeOutRight 0.8s;
+    }
 
     .panel-heading {
         font-size: 16px;
