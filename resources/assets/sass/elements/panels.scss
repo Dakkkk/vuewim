@@ -17,18 +17,14 @@
 	}
 	
 	.right-panel { 
-	    .v-enter, .v-enter-active {
+	    .v-enter {
         animation: fadeInRight 0.8s;
         }
-	    .v-leave-active {
-         animation: fadeOutRight 0.8s;
+	    .v-enter-active {
+         animation: fadeIn 1.2s;
         }
 	}
 	
-	.v-leave {
-        animation: fadeOutRight 0.8s;
-    }
-
     .panel-heading {
         font-size: 16px;
         font-weight: 300;
