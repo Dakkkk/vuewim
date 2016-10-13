@@ -35,6 +35,9 @@ module.exports = {
           },
           '/about': {
             component: require('./compiled/pages/home/about.vue')
+          },
+          '/contact': {
+            component: require('./compiled/pages/home/contact.vue')
           }
         }
       },
