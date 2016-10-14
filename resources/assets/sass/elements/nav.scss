@@ -6,6 +6,21 @@
 	///background-color: #abbced;
 	background-color: #FFF;
 	border-bottom: 1px solid #000;
+	color: #FFF;
+	
+	.collapsed {
+		background-color: #002080;
+		background-color: #aaaaaa;
+		border: 1px solid #000;
+		color: #000;
+	}
+	
+	&-toggle {
+	    border: 1px solid #000;
+	    background-color: #aaa;
+		color: #fff;
+	}
+	
 
 	.navbar-brand {
 		font-size: 28px;
