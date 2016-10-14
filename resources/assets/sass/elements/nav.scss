@@ -8,20 +8,17 @@
 	border-bottom: 1px solid #000;
 	color: #FFF;
 	
-	.collapsed {
-		background-color: #002080;
-		background-color: #aaaaaa;
-		border: 1px solid #000;
-		color: #000;
-	}
-	
 	&-toggle {
-	    border: 1px solid #000;
-	    background-color: #aaa;
+	    border: 2px solid #000;
 		color: #fff;
 	}
 	
-
+	.collapsed {
+		background-color: #abc;
+		border: 1px solid #000;
+	    color: #000	
+	}
+	
 	.navbar-brand {
 		font-size: 28px;
 
