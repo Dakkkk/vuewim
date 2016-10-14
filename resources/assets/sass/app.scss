@@ -8,8 +8,10 @@ $active-icon-color: #6CC94D;
 $btn-border-radius-base: 4px;
 $btn-font-weight: 300;
 $font-family-sans-serif: "Lato", Helvetica, Arial, sans-serif !default;
+$font-family-source-pro: 'Source Sans Pro', sans-serif;
 $font-size-base: 14px;
 $navbar-height: 65px;
+
 
 /*
  * Bootstrap CSS...
@@ -49,11 +51,18 @@ body {
 	font-weight: 300;
 	margin-bottom: 80px;
 	background-image: url('../img/wim_background.jpg');
-	background-position: center center;
+	background-position:center center;
+	background-repeat: no-repeat;
+    //background-color: #e4e4e2;
+	background-color: #f5f5f5;
+	font-family: $font-family-source-pro;
+
+
 }
 
 .footer {
-	background-color: #f5f5f5;
+	//background-color: #abbced;
+	background-color:#E5E5E4;
 	border-top: 1px solid #e7e7e7;
 	bottom: 0;
 	height: 80px;
