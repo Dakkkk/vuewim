@@ -21,6 +21,7 @@
 	.navbar-brand {
 		font-size: 28px;
 		color: $logo-font-color;
+		min-width: 200px;
 
 		i {
 			color: #f4645f;
@@ -48,5 +49,11 @@
 	}
 	.menu-text {
 		font-weight: 700;
+	}
+	
+	.my-logo {
+		border: 1px solid;
+		background-color: lightseagreen;
+		padding-right: 5px; 
 	}
 }
