@@ -11,3 +11,12 @@
 		font-weight: 300;
 	}
 }
+
+.btn-email, .btn-call {
+   display: inline-block;
+   max-width: 40px;
+   max-height: 40px;
+   margin-left: 20px;
+   padding: 5px;
+   background-color: green;
+}

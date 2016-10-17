@@ -9,8 +9,8 @@ $btn-border-radius-base: 4px;
 $btn-font-weight: 300;
 $font-family-sans-serif: "Lato", Helvetica, Arial, sans-serif !default;
 $font-family-source-pro: 'Source Sans Pro', sans-serif;
-$font-size-base: 15px;
-$font-size-header: 17px;
+$font-size-base: 16px;
+$font-size-header: 18px;
 $navbar-height: 65px;
 $active-link-font-color: #482bbd;
 $active-link-bcg-color: whitesmoke;
@@ -32,6 +32,8 @@ $active-link-bcg-color: whitesmoke;
 @import "elements/panels";
 @import "elements/tables";
 @import "elements/tooltips";
+@import "elements/contact";
+
 
 /**
  * Components
