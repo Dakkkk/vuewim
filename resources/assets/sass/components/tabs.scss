@@ -5,16 +5,11 @@
 		a {
 			border-bottom: 1px solid rgba(0,0,0,.1);
 			border-left: 3px solid transparent;
-			//color: #555;
-		    color: #482bbd;
+		    color: #129bbd;
+			//color: #000;
 			i {
-				//color: #aaa;
 				position: relative;
-			    color: #482bbd;
 				color:  #ffcccc;
-                &:hover {
-				  color:#ff1a1a;
-				}
 			}
 		}
 
@@ -42,6 +37,7 @@
 			background-color: white;
 		}
 		li a.v-link-active {
+			color: #482bbd;
 		    i {
 				 color:#ff1a1a;
 			}

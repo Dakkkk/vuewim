@@ -8,7 +8,7 @@
 	}
 	
 	.left-panel {
-	    color: #482bbd;
+	    //color: #482bbd;
 	    .v-enter {
          animation: fadeInLeft 0.8s;
         }
@@ -17,14 +17,15 @@
         }
 	}
 	
-	.right-panel { 
+	.right-panel {
+	    color: #129bbd;
 	    .v-enter {
         animation: fadeInRight 0.8s;
         }
 	    .v-enter-active {
          animation: fadeIn 1.2s;
         }
-		color: #482bbd;
+		//color: #482bbd;
 	}
 	
     .panel-heading {
