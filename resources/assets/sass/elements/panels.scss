@@ -5,7 +5,7 @@
 
 	.panel-body {
 		font-weight: 300;
-		min-height: 130px;
+		min-height: 130px; 
 	}
 	
 	.left-panel {
@@ -40,5 +40,11 @@
 		.panel-body, .panel-header {
 			padding: 0;
 		}
+	}
+	
+	.v-enter-active {
+	   @media (max-width: $mobile-max-width) {
+	     min-height: 180px;
+	  } 
 	}
 }

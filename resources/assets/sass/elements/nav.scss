@@ -21,8 +21,9 @@
 	.navbar-brand {
 		font-size: 28px;
 		color: $logo-font-color;
-		min-width: 200px;
-
+		@media (min-width: $screen-min-width) {
+		  min-width: 200px;
+		}  
 		i {
 			color: #f4645f;
 			color: green;
