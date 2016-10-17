@@ -7,7 +7,7 @@
 			border-left: 3px solid transparent;
 		    color: #129bbd;	
 			&:hover {
-			   background: whitesmoke;				
+			   background: $active-link-bcg-color;				
 			}		
 			i {
 				position: relative;
@@ -36,7 +36,7 @@
 		}
 
 		li a.v-link-active {
-			color: #482bbd;
+			color: $active-link-font-color;
 			font-weight: 700;
 		    i {
 				 color:#ff1a1a;
