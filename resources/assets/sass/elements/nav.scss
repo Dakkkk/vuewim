@@ -54,10 +54,12 @@
 	}
 	
 	.my-logo {
-		border: 1px solid;
-		border-radius: 5px;
+		//border: 1px solid;
+		//border-radius: 5px;
 		//background-color: lightgray;
 		color:$nav-font-color;
-		padding-right: 5px; 
+		padding: 5px; 
+		margin-left: 17.5px;
+		animation: zoomInUp 3.5s;
 	}
 }

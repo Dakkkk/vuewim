@@ -5,10 +5,7 @@
 		a {
 			border-bottom: 1px solid rgba(0,0,0,.1);
 			border-left: 3px solid transparent;
-		    color: $page-nav-links-color;	
-			&:hover {
-			   background: $active-link-bcg-color;				
-			}		
+		    color: $page-nav-links-color;		
 			i {
 				position: relative;
 				color:  #ffcccc;
@@ -41,7 +38,7 @@
 			font-weight: 700;
 		    i {
 				 color:#ff1a1a;
-				 animation: flip 0.8s;
+				 animation: rollIn 1.1s;
 			}
 		}
 	}

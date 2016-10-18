@@ -81,6 +81,13 @@ body {
 	position: absolute;
 	width: 100%;
 	color: #FFF;
+    animation: fadeInUp 1.5s;
+
+	//animation: zoomInUp 2s;
+	.pull-left {
+		animation: fadeIn 3.5s;
+		color: #ffffff
+	}
 
 
 	.footer-social-icons {

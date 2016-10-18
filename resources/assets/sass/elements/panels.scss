@@ -11,7 +11,7 @@
 	.left-panel {
 	    //color: #482bbd;
 	    .v-enter {
-         animation: fadeInLeft 0.8s;
+         animation: fadeInLeft 1s;
         }
 		v-leave {
          animation: fadeOutLeft 0.8s;
@@ -21,7 +21,7 @@
 	.right-panel {
 	    color: $article-content-color;
 	    .v-enter {
-        animation: fadeInRight 0.8s;
+        animation: fadeInRight 1s;
         }
 	    .v-enter-active {
          animation: fadeIn 1.2s;
