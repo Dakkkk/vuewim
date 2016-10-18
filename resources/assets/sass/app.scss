@@ -14,11 +14,17 @@ $font-size-header: 18px;
 $navbar-height: 65px;
 $active-link-font-color: #482bbd;
 //$active-link-font-color:#2B547E;
-$active-link-bcg-color: whitesmoke;
-$logo-font-color: #482bbd;
-$nav-font-color: #482bbd;
+$active-link-font-color: #482bbd;
+
+$active-link-bcg-color: #fffccc;
+$active-link-bcg-current-color: #fffccc;
+$logo-font-color: #000000;
+$nav-font-color: #000000;
 $screen-min-width: 1023px;
 $mobile-max-width: 520px;
+$page-nav-links-color:#482bbd;
+$article-content-color:#482bbd;
+
 
 /*
  * Bootstrap CSS...

@@ -5,7 +5,7 @@
 		a {
 			border-bottom: 1px solid rgba(0,0,0,.1);
 			border-left: 3px solid transparent;
-		    color: #129bbd;	
+		    color: $page-nav-links-color;	
 			&:hover {
 			   background: $active-link-bcg-color;				
 			}		
@@ -22,6 +22,7 @@
 
 		li.active a {
 			border-left: 2px solid $brand-primary;
+			background-color: $active-link-bcg-current-color;
 		}
 
 		li a.v-link-active {

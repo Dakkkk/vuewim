@@ -19,7 +19,7 @@
 	}
 	
 	.right-panel {
-	    color: #129bbd;
+	    color: $article-content-color;
 	    .v-enter {
         animation: fadeInRight 0.8s;
         }
