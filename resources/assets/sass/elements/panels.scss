@@ -5,11 +5,21 @@
 
 	.panel-body {
 		font-weight: 300;
-		min-height: 130px; 
+		min-height: 130px;
+		&-left {
+		  background-image: url(../img/grid.svg);
+		  @media (min-width:$screen-min-width) {
+			background-size:400%;
+		  }	
+		  background-position: 40px;
+		  background-repeat: no-repeat;
+		  
+		}
 	}
 	
 	.left-panel {
-	    //color: #482bbd;
+	     background-image: url(../img/grid.svg);
+	     background-size: 120%;
 	    .v-enter {
          animation: fadeInLeft 1s;
         }
@@ -18,6 +28,12 @@
         }
 	}
 	
+	.v-enter-active {
+      background-image: url(../img/grid.svg);
+	  background-size: 110%;
+      background-position: -500px -20px;
+	}
+	   
 	.right-panel {
 	    color: $article-content-color;
 	    .v-enter {
