@@ -4,7 +4,6 @@
 	margin-bottom: 40px;
 	background-color: #FFF;
 	border-bottom: 1px solid #000;
-	color: #FFF;
 	
 	&-toggle {
 	    border: 2px solid #000;
@@ -13,14 +12,13 @@
 	
 	.collapsed {
 		background-color: #abc;
-		background-color: #482bbd;
+		//background-color: #482bbd;
 		border: 1px solid #000;
 	    color: #000	
 	}
 	
 	.navbar-brand {
 		font-size: 28px;
-		color: $logo-font-color;
 		@media (min-width: $screen-min-width) {
 		  min-width: 200px;
 		}  
@@ -32,6 +30,9 @@
 
 	.navbar-nav {
 		padding-top: 0px;
+		li a {
+			color:$nav-font-color;
+		}
 		li a.v-link-active {
 			text-decoration: underline;
 		}
@@ -55,7 +56,8 @@
 	.my-logo {
 		border: 1px solid;
 		border-radius: 5px;
-		background-color: lightgray;
+		//background-color: lightgray;
+		color:$nav-font-color;
 		padding-right: 5px; 
 	}
 }

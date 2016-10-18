@@ -31,9 +31,10 @@
     .panel-heading {
         font-size: $font-size-header;
         font-weight: 700;
-		color: #482bbd;
+		color: $active-link-font-color;
 		background-color: #e5f5f5;
 	    //background-color:#abbced;
+		background-color: #E5E4E2;
     }
 
 	.panel-flush {
