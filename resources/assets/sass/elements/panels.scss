@@ -60,6 +60,16 @@
 	}
 	
 	.v-enter-active {
+	   p {
+		 //margin-top: -10px;  
+	     &:before {
+		   content:"\00b7";
+		   color: #000000;
+	       font-size: 2em;
+		   vertical-align: middle;
+		   line-height: 15px;
+	     }
+	   }
 	   @media (max-width: $mobile-max-width) {
 	     min-height: 180px;
 	  } 
