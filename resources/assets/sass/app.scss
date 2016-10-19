@@ -11,17 +11,18 @@ $font-family-sans-serif: "Lato", Helvetica, Arial, sans-serif !default;
 $font-family-source-pro: 'Source Sans Pro', sans-serif;
 $font-size-base: 16px;
 $font-size-header: 18px;
+$font-size-anchor: 15px;
 $navbar-height: 65px;
-$active-link-font-color: #482bbd;
-//$active-link-font-color:#2B547E;
-$active-link-font-color:  #000000;
 
+$screen-min-width: 1023px;
+$mobile-max-width: 520px;
+
+$active-link-font-color: #482bbd;
+$active-link-font-color:  #000000;
 $active-link-bcg-color: #fffccc;
 $active-link-bcg-current-color: #fffccc;
 $logo-font-color: #000000;
 $nav-font-color: #000000;
-$screen-min-width: 1023px;
-$mobile-max-width: 520px;
 $page-nav-links-color: #000000;
 $article-content-color: #000000;
 
@@ -77,6 +78,7 @@ body {
 	
 	h3 {
 		margin-top: 0px;
+		font-size: 22px;
 	}
 }
 
@@ -97,14 +99,19 @@ body {
 	//animation: zoomInUp 2s;
 	.pull-left {
 		animation: fadeIn 3.5s;
-		color: #ffffff
+		color: #ffffff;
+		@media (max-width: $mobile-max-width) {
+		    font-size: 13px;
+		}
 	}
 
 
 	.footer-social-icons {
 		font-size: 32px;
+		@media (max-width: $mobile-max-width) {
+		    font-size: 14px;
+		}
 		padding-top: 18px;
-
 		a {
 			//color: #777;
 		}

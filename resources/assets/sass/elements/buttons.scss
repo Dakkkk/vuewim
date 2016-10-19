@@ -13,11 +13,14 @@
 }
 
 .btn-email, .btn-call {
+   width: auto;
    display: inline-block;
-   max-width: 40px;
    max-height: 40px;
    margin-left: 20px;
    padding: 5px;
+   @media (min-width: $mobile-max-width) {
+      max-width: 40px;
+   }
 }
 
 .nav-btn {
