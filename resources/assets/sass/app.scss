@@ -100,8 +100,12 @@ body {
 	.pull-left {
 		animation: fadeIn 3.5s;
 		color: #ffffff;
+		font-style: italic;
 		@media (max-width: $mobile-max-width) {
 		    font-size: 13px;
+		}
+		img {
+			margin-left: 5px;
 		}
 	}
 
