@@ -21,7 +21,7 @@
         <!-- here v-on:submit lets us connect the submit event of the form -->
         <!--    our ="submitForm" method that is called here is in vue.js -->
         <!--    note that .prevent after :submit prevents the form from submiting via the action attribute -->
-        <form id="contact_form"  v-on:submit.prevent="submitForm" action="">
+        <form id="contact_form"  v-on:submit="submitForm" action="mail.php" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <!-- v-model link to the model (i.e. pieces of the data section of vue.js) -->
