@@ -63,10 +63,12 @@ html {
 }
 
 body {
-	@media (min-width: $mobile-max-width) {
+	overflow-y: auto;
+	overflow-y: visible;
+	overflow-x: hidden; 
+	@media (max-width: $mobile-max-width) {
 	  overflow: hidden;
 	}
-	overflow-x: hidden; 
 	font-weight: 300;
 	font-weight: 500;
 	margin-bottom: 80px;
