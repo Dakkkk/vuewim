@@ -20,11 +20,11 @@ $mail->AddAddress ("dawidkunicki88@gmail.com","Dawid Kunicki");    //adres skrzy
                                                     //adresata, do którego trafi wiadomość
 if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
     {                      
-        header('Location: http://dmkweb.pl/#/contact'); //wyświetl ten komunikat
+        header('Location: http://webinmobile.eu'); //wyświetl ten komunikat
         }            
     else    //w przeciwnym wypadku
         {           
-        header('Location: http://dmkweb.pl/#/contact');    //wyświetl następujący
+        header('Location: http://webinmobile.eu');    //wyświetl następujący
         }
 
 // $to      = 'trzy.cztery@o2.pl';
