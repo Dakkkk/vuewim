@@ -3,4 +3,9 @@
         font-size: 17px;
         font-weight: 600;
     }
+    .btn-email {
+        :hover {
+	    animation: rubberBand 0.8s;
+        }
+    }
 }    

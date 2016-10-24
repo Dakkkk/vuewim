@@ -1,0 +1,70 @@
+
+<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	  viewBox="0 0 352 272" style="enable-background:new 0 0 352 272;" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+
+		.st0{fill:#fff;;stroke:#000000;stroke-width:5;stroke-miterlimit:5;}
+
+		.st0 {
+			stroke-dasharray: 2000;
+			stroke-dashoffset:0;
+			-webkit-animation: dash 4s linear forwards;
+			-o-animation: dash 4s linear forwards;
+			-moz-animation: dash 4s linear forwards;
+			animation: dash 4s linear forwards;
+		}
+
+		#logo {
+		cursor:pointer;
+		}
+
+		#logo:hover .st0 {
+			fill:#000;
+			transition: .8s;
+		}
+
+		#logo.clickit .st0 {
+			fill:#1b75bb;
+			stroke: #1b75bb;
+		}
+
+		@-webkit-keyframes dash {
+			from {
+				stroke-dashoffset: 2000;
+			}
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		var clicker = document.querySelector('#logo');
+
+		clicker.addEventListener('click', function() {
+
+			this.classList.toggle('clickit');
+
+		});
+
+	</script>
+
+</defs>
+
+
+<path class="st0" d="M325.398,12.687h-57.146c-32.18,0-61.2,12.451-81.711,35.058c-3.27,3.604-6.276,7.469-9.06,11.525l0.07,0.134
+	l-0.07-0.134c-5.55,8.082-10.124,17-13.642,26.58c-1.341,3.443-2.505,6.975-3.333,10.431c-0.021,0.073-0.042,0.147-0.062,0.221
+	c0.044-0.792,1.058-18.43,4.275-34.146c0.24-3.405,0.695-19.007-10.223-27.008c-0.857-0.628-1.486-1.143-1.929-1.561
+	c-18.117-13.736-39.589-21.098-60.777-21.098H29.618H15.015v14.602v14.602v14.603h14.602h62.171
+	c31.215,0,63.502,29.155,63.502,77.945c0,0.207,0.01,0.411,0.01,0.617c-0.001,0.214-0.01,0.426-0.01,0.64
+	c0,48.79-32.287,77.945-63.502,77.945H29.618H15.015v0.733v13.87v14.602v14.602h0.68h13.923h62.171
+	c32.005,0,64.662-16.784,85.409-46.995c0.018,0.027,0.035,0.054,0.053,0.081c0.277-0.427,0.863-1.343,1.654-2.637
+	c3.459-5.336,6.525-11.092,9.188-17.205c2.461-5.39,4.737-11.303,6.073-16.996c0,0-0.953,17.55-4.123,33.439
+	c-0.525,4.468-1.094,16.305,6.007,24.485c19.542,16.737,44.717,25.827,72.203,25.827h57.146H340v-14.602v-14.602v-14.602h-14.602
+	h-57.146c-34.287,0-68.872-24.309-69.141-78.574c0.269-54.265,34.854-78.574,69.141-78.574h57.146h13.017H340V41.892V27.289V13.584
+	v-0.897H325.398z"/>
+</svg>
