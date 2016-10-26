@@ -66,9 +66,9 @@ body {
 	overflow-y: auto;
 	overflow-y: visible;
 	overflow-x: hidden; 
-	@media (min-width: $mobile-max-width) {
-	  overflow: hidden;
-	}
+    
+	@media (min-width: $mobile-max-width) {	
+   
 	font-weight: 300;
 	font-weight: 500;
 	margin-bottom: 80px;
@@ -82,6 +82,12 @@ body {
 		margin-top: 0px;
 		font-size: 22px;
 	}
+  }
+}
+
+body:not(*:root) {
+    /*Chrome CSS here*/
+	    overflow: hidden;
 }
 
 .hide {

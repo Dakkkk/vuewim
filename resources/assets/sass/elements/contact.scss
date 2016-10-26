@@ -1,4 +1,5 @@
 .contact {
+    overflow-y: auto !important;
     .my-data {
         font-size: 17px;
         font-weight: 600;
@@ -12,19 +13,18 @@
         @media (min-width: $mobile-max-width) {
             //max-width: 90%;
              .form-group {
-            display: inline-block;
+            display: table-cell;
             &:nth-child(2) {
                 position: relative;
-                top: -97px;
-                margin-left: 10px;
-                //float: right;
+                left: 20px;
+                margin-left: 30px;
             }
            
         }
          button {
               display: block;
               position: relative;
-              top: -150px; 
+              top: -35px;
               width: 180px;
               margin: 0px; 
             }
@@ -36,6 +36,7 @@
         }
         textarea {
             height: 150px;
+            height: 20em;
             width: 200%;
             max-width: 590px;
             max-height: 150px;
