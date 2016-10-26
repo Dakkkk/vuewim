@@ -11,10 +11,10 @@
         <i class="fa fa-envelope fa-1x"></i></a>
     <img src="img/phone_call.jpg" alt="Laptop" height="137" width="200">
     
-     <div style="width:50%; float:left" class="container">
+     <div class="form-container">
          
          
-        <h2 class="text-center">Formularz kontaktowy</h2>
+        <h4>Formularz kontaktowy</h4>
         <!-- id of contact_form used in vue.js to designate this form as our app -->
         <!-- also, uses several bootstrap classes (form-group, form-control, btn, btn-primary, etc.) -->
         <!-- v- is our vue stuff; "on:" is hooking into an event -->
@@ -23,7 +23,7 @@
         <!--    note that .prevent after :submit prevents the form from submiting via the action attribute -->
         <form id="contact_form"  v-on:submit="submitForm" action="mail.php" method="post">
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">Imię:</label>
                 <!-- v-model link to the model (i.e. pieces of the data section of vue.js) -->
                 <!-- v-on lets us run methods from vue.js : this one is v-on:blur for the blur event -->
                 <!--    blur just means that the field no longer has 'focus' -->
@@ -34,7 +34,7 @@
                 <input v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" type="email" />
             </div>
             <div class="form-group">
-                <label for="message">Message <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
+                <label for="message">Wiadomość <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
                 <textarea v-model="message" v-on:blur="isValidMessage" class="form-control" name="message"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send</button>

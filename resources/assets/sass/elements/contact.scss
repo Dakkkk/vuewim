@@ -8,4 +8,16 @@
 	    animation: rubberBand 0.8s;
         }
     }
+    .form-container {
+        @media (min-width: $mobile-max-width) {
+            max-width: 50%;
+        }
+        label {
+            font-weight: 600;
+        }
+        textarea {
+            max-height: 40px;
+            max-width: 100%;
+        }
+    }
 }    
