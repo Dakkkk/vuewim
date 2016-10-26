@@ -6,7 +6,8 @@ module.exports = {
         name: '',   // data for the name on the form
         email:'',   // data for the email on the form
         message:'', // data for the message on the form
-        maxLength: 140 // maximum length of the form message
+        //maxLength: 140 // maximum length of the form message
+         errorClass: 'text-danger'
     },
     methods: { // all the actions our app can do
         isValidName: function () { // TODO what if name is just spaces?
@@ -20,12 +21,20 @@ module.exports = {
             return valid;
         },
         isValidMessage: function () { // what is message is just spaces?
+            var maxLength = 140;
             var valid = (this.message.length > 0) &&
-                (this.message.length < this.maxLength);
+                (this.message.length < maxLength);
             console.log('checking for a valid message: ' + valid);
             return valid;
         },
         checkMessage: function () {
+            if (!this.isValidMessage()) {
+               console.log('Not a valid message');
+               $("textarea").addClass("text-danger");
+            }   else {
+               console.log('A valid message');
+               $("textarea").removeClass("text-danger");
+            }         
             // TODO keep the message below maxMessageLength?
             //      or maybe change the text, background, or counter color?
         },
@@ -35,12 +44,11 @@ module.exports = {
             // TODO prevent form from submitting if name, email, or message
             //      are invalid and display message
             // TODO submit to form processor
-            var self = this;
             console.log('submitting message...');
             $.ajax({url: $(form).attr('action'), method: 'POST', data: {
                 name: this.name,
                 email: this.email,
-                message: this.message
+                message: this.message,
             }}).then(function () {
                 alert('Your form was submitted!');
             }, function () {
