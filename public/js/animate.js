@@ -21,11 +21,11 @@ var AnimateWeb = function($main) {
     })
     .to(this.desktop, 0.5, {
         x: 13,
-        delay: 1
+        delay: 5
     })
     .to([this.mobile, this.mobile2], 0.5, {
         x: -6,
-        delay: 1
+        delay: 5
     }, 0)
     .to(this.mobile2, 0, {
         opacity: 1
@@ -35,11 +35,11 @@ var AnimateWeb = function($main) {
     })
     .to(this.desktop, 0.5, {
         x: 13,
-        delay: 1
+        delay: 5
     })
     .to([this.mobile, this.mobile2], 0.5, {
         x: -6,
-        delay: 1
+        delay: 5
     }, 2.0)
     .to(this.mobile2, 0, {
         opacity: 0
