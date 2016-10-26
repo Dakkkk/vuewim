@@ -87,7 +87,9 @@ body {
 
 body:not(*:root) {
     /*Chrome CSS here*/
-	    overflow: hidden;
+		@media (min-width: $mobile-max-width) {	
+	      overflow: hidden;
+		}
 }
 
 .hide {
