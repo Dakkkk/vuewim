@@ -31,11 +31,13 @@ module.exports = {
         },
         submitForm: function () {
             console.log('submitted');
+            var form = '#contact_form'; // id of the 'app'
             // TODO prevent form from submitting if name, email, or message
             //      are invalid and display message
             // TODO submit to form processor
+            var self = this;
             console.log('submitting message...');
-            this.$http({url: '/someUrl', method: 'POST', data: {
+            $.ajax({url: $(form).attr('action'), method: 'POST', data: {
                 name: this.name,
                 email: this.email,
                 message: this.message
