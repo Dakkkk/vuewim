@@ -28,8 +28,8 @@
                 <!-- v-on lets us run methods from vue.js : this one is v-on:blur for the blur event -->
                 <!--    blur just means that the field no longer has 'focus' -->
                 <input v-model="name" v-on:blur="isValidName" class="form-control" name="name" type="text" />
-            </div>
-            <div class="form-group">
+            <!--</div>-->
+            <!--<div class="form-group">-->
                 <label for="email">Email</label>
                 <input v-model="email" v-on:blur="isValidEmail" class="form-control" name="email" type="email" />
             </div>
