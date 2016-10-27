@@ -10,33 +10,49 @@ module.exports = {
          errorClass: 'text-danger'
     },
     methods: { // all the actions our app can do
-        isValidName: function () { // TODO what if name is just spaces?
-            var valid = this.name.length > 0;
+        isValidName: function () { 
+            var valid = (this.name.length > 0) && (this.name.match(/^\s+$/) === null);
             console.log('checking for a valid name: ' + valid);
             return valid;
         },
+        checkName: function () {
+            if (!this.isValidName()) {
+               console.log('Not a valid name');
+               $(".form-name").addClass("text-danger");
+            }   else {
+               console.log('A valid name');
+               $(".form-name").removeClass("text-danger");
+            }       
+        },
         isValidEmail: function () { // TODO is a@b a valid email?
-            var valid = this.email.indexOf('@') > 0;
+            var valid = (this.email.indexOf('@') > 0) && (this.email.match(/^\s+$/) === null) ;
             console.log('checking for a valid email: ' + valid);
             return valid;
         },
-        isValidMessage: function () { // what is message is just spaces?
+        checkEmail: function () {
+            if (!this.isValidEmail()) {
+               console.log('Not a valid e-mail');
+               $(".form-email").addClass("text-danger");
+            }   else {
+               console.log('A valid e-mail!');
+               $(".form-email").removeClass("text-danger");
+            }       
+        },
+        isValidMessage: function () { 
             var maxLength = 140;
             var valid = (this.message.length > 0) &&
-                (this.message.length < maxLength);
+                (this.message.length < maxLength) && (this.message.match(/^\s+$/) === null);
             console.log('checking for a valid message: ' + valid);
             return valid;
         },
         checkMessage: function () {
             if (!this.isValidMessage()) {
                console.log('Not a valid message');
-               $("textarea").addClass("text-danger");
+               $(".form-message").addClass("text-danger");
             }   else {
                console.log('A valid message');
-               $("textarea").removeClass("text-danger");
+               $(".form-message").removeClass("text-danger");
             }         
-            // TODO keep the message below maxMessageLength?
-            //      or maybe change the text, background, or counter color?
         },
         submitForm: function () {
             console.log('submitted');
