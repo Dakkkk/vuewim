@@ -96,6 +96,10 @@ body:not(*:root) {
 	display: none;
 }
 
+.show {
+	display: block;
+}
+
 .footer {
 	background-color: #000;
 	border-top: 3px solid #fff;
