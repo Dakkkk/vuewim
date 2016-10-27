@@ -38,7 +38,7 @@
                 <textarea v-model="message" v-on:keyup="checkMessage" v-on:blur="checkIfFormValid"  class="form-control form-message" v-bind:class="[errorClass]" name="message"></textarea>
             </div>
             <button type="submit" v-bind:disabled="!checkIfFormValid"  class="btn btn-primary">Wyślij</button>
-            <span id="form-error-msg" class="hide">Error msg</span>
+            <span id="message-sent" class="hide">Wiadomość wysłana!</span>
         </form>
     </div>
 </article>

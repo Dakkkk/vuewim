@@ -7,13 +7,14 @@ module.exports = {
         email:'',   // data for the email on the form
         message:'' // data for the message on the form
     },
+    
     computed: {
          checkIfFormValid: function () {
             var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();          
             return valid;  
           }
         },
-    
+
      methods: { // all the actions our app can do
       
         isValidName: function () { 
@@ -60,14 +61,17 @@ module.exports = {
         },
      
         submitForm: function () {
-            if (!this.checkIfFormValid()) {
-               $('#form-error-msg').addClass("show"); 
-               return console.log("Please correct the form");
-            }
+            // if (!this.checkIfFormValid()) {
+            //     console.log(this.checkIfFormValid());
+            //    $('#form-error-msg').addClass("show"); 
+            //    return console.log("Please correct the form");
+            // }
+            console.log('submitted');
             var form = '#contact_form'; // id of the 'app'
             // TODO prevent form from submitting if name, email, or message
             //      are invalid and display message
             // TODO submit to form processor
+            console.log('submitting message...');
             $.ajax({url: $(form).attr('action'), method: 'POST', data: {
                 name: this.name,
                 email: this.email,
@@ -75,7 +79,8 @@ module.exports = {
             }}).then(function () {
                 alert('Your form was submitted!');
             }, function () {
-                alert('Form submission failed');
+                //alert('Form submission failed');
+                $('#message-sent').addClass("show"); 
             });
         }
     }
