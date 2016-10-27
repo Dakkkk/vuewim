@@ -13,13 +13,16 @@ module.exports = {
            var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();          
            console.log("ValiD ", valid);
           return valid;  
-        }
+          }
         },
-    methods: { // all the actions our app can do
+    
+     methods: { // all the actions our app can do
+      
         isValidName: function () { 
             var valid = (this.name.length > 0) && (this.name.match(/^\s+$/) === null);
             return valid;
         },
+      
         checkName: function () {
             if (!this.isValidName()) {
                $(".form-name").addClass("text-danger");
@@ -27,12 +30,14 @@ module.exports = {
                $(".form-name").removeClass("text-danger");
             }       
         },
-        
-
+      
         isValidEmail: function () { // TODO is a@b a valid email?
-            var valid = (this.email.length > 0) && (this.email.indexOf('@') > 0) && (this.email.match(/^\s+$/) === null) ;
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var emailtest = re.test(this.email);
+            var valid = (this.email.length > 0) && (this.email.indexOf('@') > 0) && (this.email.match(/^\s+$/) === null) && emailtest ;
             return valid;
         },
+     
         checkEmail: function () {
             if (!this.isValidEmail()) {
                $(".form-email").addClass("text-danger");
@@ -41,12 +46,14 @@ module.exports = {
                $(".form-email").removeClass("text-danger");
             }       
         },
+     
         isValidMessage: function () { 
             var maxLength = 140;
             var valid = (this.message.length > 0) &&
                 (this.message.length < maxLength) && (this.message.match(/^\s+$/) === null);
             return valid;
         },
+     
         checkMessage: function () {
             if (!this.isValidMessage()) {
                $(".form-message").addClass("text-danger");
@@ -54,11 +61,7 @@ module.exports = {
                $(".form-message").removeClass("text-danger");
             }
         },
-        checkIfFormValid: function () {
-        //   var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();          
-        //   console.log("ValiD ", valid);
-          return this.name != '' && this.email != '';  
-        },
+     
         submitForm: function () {
             if (!this.checkIfFormValid()) {
                 console.log(this.checkIfFormValid());
@@ -82,5 +85,5 @@ module.exports = {
             });
         }
     }
-    
+   
 };
