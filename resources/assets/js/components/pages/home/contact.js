@@ -54,7 +54,14 @@ module.exports = {
                $(".form-message").removeClass("text-danger");
             }         
         },
+        checkIfSubmit: function () {
+          var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();
+          return valid;  
+        },
         submitForm: function () {
+            if (!this.checkIfSubmit()) {
+               return alert("Please correct the form");
+            }
             console.log('submitted');
             var form = '#contact_form'; // id of the 'app'
             // TODO prevent form from submitting if name, email, or message
