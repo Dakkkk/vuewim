@@ -6,13 +6,11 @@ module.exports = {
         name: '',   // data for the name on the form
         email:'',   // data for the email on the form
         message:'' // data for the message on the form
-        //maxLength: 140 // maximum length of the form message
     },
     computed: {
          checkIfFormValid: function () {
-           var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();          
-           console.log("ValiD ", valid);
-          return valid;  
+            var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();          
+            return valid;  
           }
         },
     
@@ -31,7 +29,7 @@ module.exports = {
             }       
         },
       
-        isValidEmail: function () { // TODO is a@b a valid email?
+        isValidEmail: function () { 
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             var emailtest = re.test(this.email);
             var valid = (this.email.length > 0) && (this.email.indexOf('@') > 0) && (this.email.match(/^\s+$/) === null) && emailtest ;
@@ -42,7 +40,6 @@ module.exports = {
             if (!this.isValidEmail()) {
                $(".form-email").addClass("text-danger");
             }   else {
-               console.log('A valid e-mail!');
                $(".form-email").removeClass("text-danger");
             }       
         },
@@ -64,16 +61,13 @@ module.exports = {
      
         submitForm: function () {
             if (!this.checkIfFormValid()) {
-                console.log(this.checkIfFormValid());
                $('#form-error-msg').addClass("show"); 
                return console.log("Please correct the form");
             }
-            console.log('submitted');
             var form = '#contact_form'; // id of the 'app'
             // TODO prevent form from submitting if name, email, or message
             //      are invalid and display message
             // TODO submit to form processor
-            console.log('submitting message...');
             $.ajax({url: $(form).attr('action'), method: 'POST', data: {
                 name: this.name,
                 email: this.email,
