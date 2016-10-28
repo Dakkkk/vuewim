@@ -100,6 +100,15 @@ body:not(*:root) {
 	display: "";
 }
 
+.app-image {
+	@media (max-width: $mobile-max-width) {
+	  display: none;
+	}
+	position: absolute;
+    top: 300px;
+    left: 190px;
+}
+
 .footer {
 	background-color: #000;
 	border-top: 3px solid #fff;
@@ -109,8 +118,17 @@ body:not(*:root) {
 	width: 100%;
 	color: #FFF;
     animation: fadeInUp 1.5s;
+	@media (max-width: $mobile-max-width) {
+	   font-size: 13px;
+	}
+	&-logo {
+		height: 10px;
+		width: 200px;
+	    @media (max-width: $mobile-max-width) {
+		  width: 100px;
+	  }
+	}
 
-	//animation: zoomInUp 2s;
 	.pull-left {
 		animation: fadeIn 3.5s;
 		color: #ffffff;
@@ -121,6 +139,15 @@ body:not(*:root) {
 		img {
 			margin-top: -3.5px;
 			margin-left: 5px;
+		}
+	}
+	
+	.pull-right {
+		a {
+			@media (max-width: $mobile-max-width) {
+				font-size: 12px;
+				margin-top: 5px;
+			}
 		}
 	}
 
