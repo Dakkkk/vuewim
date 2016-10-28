@@ -12,20 +12,22 @@ $mail->SMTPAuth = true;    //włączenie autoryzacji do serwera SMTP
 $mail->Username = "dk@rapidapps.pl";    //nazwa użytkownika do skrzynki e-mail
 $mail->Password = "kuna,Kuna88";    //hasło użytkownika do skrzynki e-mail
 $mail->Port = 587; //port serwera SMTP 
-//$mail->Subject = $_POST['userSubject']; //Temat wiadomości, można stosować zmienne i znaczniki HTML
+$mail->Subject = $_POST['title']; //Temat wiadomości, można stosować zmienne i znaczniki HTML
 $mail->Body = $_POST['message'];    //Treść wiadomości, można stosować zmienne i znaczniki HTML 
 $mail->SMTPAutoTLS = false;   //wyłączenie TLS
 $mail->SMTPSecure = '';    // 
 $mail->AddAddress ("dawidkunicki88@gmail.com","Dawid Kunicki");    //adres skrzynki e-mail oraz nazwa
                                                     //adresata, do którego trafi wiadomość
-if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
-    {                      
-        header('Location: http://webinmobile.eu'); //wyświetl ten komunikat
-        }            
-    else    //w przeciwnym wypadku
-        {           
-        header('Location: http://webinmobile.eu');    //wyświetl następujący
-        }
+// if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
+//     {                      
+//         //header('Location: http://webinmobile.eu'); //wyświetl ten komunikat
+//         echo 'Wszystko ok';
+//         }            
+//     else    //w przeciwnym wypadku
+//         {           
+//         //header('Location: http://webinmobile.eu');    //wyświetl następujący
+//         echo 'Nie wysłano';
+//         }
 
 // $to      = 'trzy.cztery@o2.pl';
 // $subject = $_POST['subject'];

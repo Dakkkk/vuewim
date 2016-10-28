@@ -3,30 +3,30 @@
 module.exports = {
     el: '#contact_form', // id of the 'app'
     data: {
-        name: '',   // data for the name on the form
+        title: '',   // data for the name on the form
         email:'',   // data for the email on the form
         message:'' // data for the message on the form
     },
     
     computed: {
          checkIfFormValid: function () {
-            var valid = this.isValidName() && this.isValidEmail() && this.isValidMessage();          
+            var valid = this.isValidTitle() && this.isValidEmail() && this.isValidMessage();          
             return valid;  
           }
         },
 
      methods: { // all the actions our app can do
       
-        isValidName: function () { 
-            var valid = (this.name.length > 0) && (this.name.match(/^\s+$/) === null);
+        isValidTitle: function () { 
+            var valid = (this.title.length > 0) && (this.title.match(/^\s+$/) === null);
             return valid;
         },
       
-        checkName: function () {
-            if (!this.isValidName()) {
-               $(".form-name").addClass("text-danger");
+        checkTite: function () {
+            if (!this.isValidTitle()) {
+               $(".form-title").addClass("text-danger");
             }   else {
-               $(".form-name").removeClass("text-danger");
+               $(".form-title").removeClass("text-danger");
             }       
         },
       
@@ -59,28 +59,23 @@ module.exports = {
                $(".form-message").removeClass("text-danger");
             }
         },
-     
+         
         submitForm: function () {
             // if (!this.checkIfFormValid()) {
-            //     console.log(this.checkIfFormValid());
-            //    $('#form-error-msg').addClass("show"); 
-            //    return console.log("Please correct the form");
+            //    return;
             // }
-            console.log('submitted');
             var form = '#contact_form'; // id of the 'app'
             // TODO prevent form from submitting if name, email, or message
             //      are invalid and display message
             // TODO submit to form processor
-            console.log('submitting message...');
             $.ajax({url: $(form).attr('action'), method: 'POST', data: {
-                name: this.name,
+                title: this.title,
                 email: this.email,
                 message: this.message,
             }}).then(function () {
-                alert('Your form was submitted!');
-            }, function () {
-                //alert('Form submission failed');
                 $('#message-sent').addClass("show"); 
+            }, function () {
+                $('#message-fail').addClass("show"); 
             });
         }
     }

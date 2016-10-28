@@ -49,13 +49,16 @@
             border: 2px solid red;
             color: red;
         }
-        #message-sent {
+        #message-sent, #message-fail {
             color: green;
             font-weight: bold;
             font-style: italic;
             font-size: 16px;
             margin-top: 0px;
             
+        }
+        #message-fail {
+            color: red;
         }
     }
 }    

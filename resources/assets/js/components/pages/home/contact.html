@@ -23,11 +23,11 @@
         <!--    note that .prevent after :submit prevents the form from submiting via the action attribute -->
         <form id="contact_form"  v-on:submit.prevent="submitForm" action="mail.php" method="post">
             <div class="form-group">
-                <label for="name">Imię:</label>
+                <label for="title">Tytuł</label>
                 <!-- v-model link to the model (i.e. pieces of the data section of vue.js) -->
                 <!-- v-on lets us run methods from vue.js : this one is v-on:blur for the blur event -->
                 <!--    blur just means that the field no longer has 'focus' -->
-                <input v-model="name" v-on:keyup="checkName" class="form-control form-name" name="name" type="text" />
+                <input v-model="title" v-on:keyup="checkName" class="form-control form-title" name="title" type="text" />
             <!--</div>-->
             <!--<div class="form-group">-->
                 <label for="email">Email</label>
@@ -39,6 +39,8 @@
             </div>
             <button type="submit" v-bind:disabled="!checkIfFormValid"  class="btn btn-primary">Wyślij</button>
             <span id="message-sent" class="hide">Wiadomość wysłana!</span>
+            <span id="message-fail" class="hide">Bład serwera, spróbuj ponownie</span>
+
         </form>
     </div>
 </article>
