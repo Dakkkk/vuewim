@@ -31,10 +31,12 @@
 	}
 	
 	.v-enter-active {
+		background-color: rgba(10, 114, 113, 0.7);
       background-image: url(../img/grid.svg);
 	  background-size: 110%;
       background-position: -500px -20px;
 	  min-height: 180px;
+		color: #FFFFFF;
 	  
 	  p {
 		  max-width: 440px;
@@ -78,7 +80,8 @@
         font-weight: 700;
 		color: $active-link-font-color;
 		//background-color: #e5f5f5;
-		background-color: #E5E4E2;
+		//background-color: #E5E4E2;
+		background-color:#D0D0D0;
     }
 
 	.panel-flush {
