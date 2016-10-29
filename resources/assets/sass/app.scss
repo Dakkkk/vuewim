@@ -16,7 +16,14 @@ $font-size-h3-mobile: 20px;
 $navbar-height: 65px;
 
 $screen-min-width: 1023px;
+$screen-low-resolution-width: 1025px;
+$screen-1600-min-width: 1599px;
+$screen-1600-max-width: 1681px;
+$screen-HD-width: 1920px;
+$screen-2560-width: 2560px;
+
 $mobile-max-width: 520px;
+$mobile-max-landscape-width: 520px;
 
 $active-link-font-color: #482bbd;
 $active-link-font-color:  #000000;
@@ -114,6 +121,25 @@ body:not(*:root) {
 	position: absolute;
     top: 300px;
     left: 190px;
+	@media (max-width: $screen-low-resolution-width) {
+		left: 105px;
+	}
+	@media (min-width: $screen-1600-min-width) and (max-width: $screen-1600-max-width) {
+		left:315px;
+	}
+	
+	@media (min-width: $screen-1600-max-width - 1px) {
+		left:350px;
+	}
+	@media (min-width: $screen-HD-width - 1px) {
+	    left: 477px;
+	}
+	@media (min-width: $screen-2560-width - 1px) {
+	    left: 796px;
+	}
+	@media (min-width: $screen-2560-width + 40px) {
+	    display: none;
+	}
 }
 
 .footer {
