@@ -12,6 +12,7 @@ $font-family-source-pro: 'Source Sans Pro', sans-serif;
 $font-size-base: 16px;
 $font-size-header: 18px;
 $font-size-anchor: 15px;
+$font-size-h3-mobile: 20px;
 $navbar-height: 65px;
 
 $screen-min-width: 1023px;
@@ -74,7 +75,7 @@ body {
 	@media (max-width: $mobile-max-width) { 
 	  h3 {
 		margin-top: 5px;
-		font-size: 20px !important;
+		font-size: $font-size-h3-mobile;
 	  }
 	}
 
@@ -93,7 +94,7 @@ body {
 
 body:not(*:root) {
     /*Chrome CSS here*/
-		@media (min-width: $mobile-max-width) {	
+		@media (min-width: $screen-min-width) {	
 	      overflow: hidden;
 		}
 }
@@ -107,7 +108,7 @@ body:not(*:root) {
 }
 
 .app-image {
-	@media (max-width: $mobile-max-width) {
+	@media (max-width: $screen-min-width) {
 	  display: none;
 	}
 	position: absolute;
@@ -149,6 +150,9 @@ body:not(*:root) {
 	}
 	
 	.pull-right {
+		@media (min-width:  $mobile-max-width) and (max-width: $screen-min-width) {
+			margin-right: 35px;
+		}
 		a {
 			@media (max-width: $mobile-max-width) {
 				font-size: 12px;
