@@ -22,6 +22,9 @@
 	.left-panel {
 	     background-image: url(../img/grid.svg);
 	     background-size: 120%;
+			 a {
+				 padding-left: 70px;
+			 }
 	    .v-enter {
          animation: fadeInLeft 1s;
         }
