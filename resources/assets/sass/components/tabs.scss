@@ -23,8 +23,9 @@
 		}
 
 		li a.v-link-active {
-			border-left: 2px solid $brand-primary;
-			border-right: 2px solid $brand-primary;
+			border-left: 1px solid $brand-primary;
+			border-right: 1px solid $red-icons;
+			border-bottom: 1px solid $brand-primary;
 			background-color: $left-tabs-menu-bcg-color;
 			&:hover {
 				background-color: none;
@@ -42,7 +43,7 @@
 			color: $active-link-font-color;
 			font-weight: 700;
 		    i {
-				 color:#ff1a1a;
+				 color:$red-icons;
 				 animation: rollIn 1.1s;
 			}
 		}
