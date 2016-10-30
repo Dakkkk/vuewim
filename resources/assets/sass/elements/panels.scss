@@ -85,6 +85,9 @@
 		  color: $active-link-font-color;
 			text-align: center;
 		  background-color: rgba(173, 174, 175, 0.55);
+			// background: #2C3E50; /* fallback for old browsers */
+			// background: -webkit-linear-gradient(to left, #2C3E50 , #4CA1AF); /* Chrome 10-25, Safari 5.1-6 */
+			// background: linear-gradient(to left, #2C3E50 , #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
 	.panel-flush {
