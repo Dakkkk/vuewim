@@ -19,11 +19,16 @@
 
 		li.active a {
 			border-left: 2px solid $brand-primary;
-			background-color: $active-link-bcg-current-color;
+			//background-color: $active-link-bcg-current-color;
 		}
 
 		li a.v-link-active {
-			border-left: 1px solid $brand-primary;
+			border-left: 2px solid $brand-primary;
+			border-right: 2px solid $brand-primary;
+			background-color: $left-tabs-menu-bcg-color;
+			&:hover {
+				background-color: none;
+			}
 		}
 
 		li a.v-link-active-exact {

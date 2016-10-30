@@ -22,6 +22,7 @@
 	.left-panel {
 	     background-image: url(../img/grid.svg);
 	     background-size: 120%;
+			 //text-align: center;
 			 a {
 				 padding-left: 70px;
 			 }
@@ -81,10 +82,9 @@
     .panel-heading {
         font-size: $font-size-header;
         font-weight: 700;
-		color: $active-link-font-color;
-		//background-color: #e5f5f5;
-		//background-color: #E5E4E2;
-		background-color:#D0D0D0;
+		  color: $active-link-font-color;
+			text-align: center;
+		  background-color: rgba(173, 174, 175, 0.55);
     }
 
 	.panel-flush {
