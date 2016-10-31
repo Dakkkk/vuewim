@@ -41,21 +41,7 @@ module.exports = {
           }
         }
       },
-      '/dogs': {
-        component: require('./compiled/pages/dogs.vue'),
-        auth: true,
-        subRoutes: {
-          '/': {
-            component: require('./compiled/pages/dogs/index.vue')
-          },
-          '/:id': {
-            component: require('./compiled/pages/dogs/show.vue')
-          },
-          '/create': {
-            component: require('./compiled/pages/dogs/create.vue')
-          }
-        }
-      },
+    
       '/terms': {
         component: require('./compiled/pages/terms.vue')
       },
