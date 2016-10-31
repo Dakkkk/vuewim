@@ -25,6 +25,7 @@ var defaultRequest = require('rest/interceptor/defaultRequest')
 var errorCode = require('rest/interceptor/errorCode')
 var interceptor = require('rest/interceptor')
 
+
 window.client = rest.wrap(pathPrefix, { prefix: config.api.base_url })
                     .wrap(mime)
                     .wrap(defaultRequest, config.api.defaultRequest)

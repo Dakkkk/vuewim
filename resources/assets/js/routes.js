@@ -33,21 +33,60 @@ module.exports = {
       '': '/home',
       '/auth': '/auth/login'
     })
-
-    router.beforeEach(function (transition) {
-
-      var token = localStorage.getItem('jwt-token')
-      if (transition.to.auth) {
-        if (!token || token === null) {
-          transition.redirect('/auth/login')
+    
+        var resources = {
+    "pl": {
+        "translation": {
+            "title": "Hejo!",
+            "welcome-title": "Witamy na stronie firmy Web In Mobile!",
+            "welcome-p1": "Witamy na stronie firmy Web In Mobile.",
+            "welcome-p2": "Zaparaszamy do współpracy!"
+               
         }
-      }
-      if (transition.to.guest) {
-        if (token) {
-          transition.redirect('/')
+    },
+        "en": {
+        "translation": {
+            "title": "title of the page",
+            "welcome-title": "Welcome!",
+            "welcome-p1": "Witamy on the page of Web In Mobile.",
+            "welcome-p2": "Cooperation"
+            
+              
+            }
         }
-      }
-      transition.next()
+    }
+
+    // $document.onload(function() {
+    //        i18n.init({
+    //     "lng": 'pl',
+    //     "resStore": resources,
+    //     "fallbackLng" : 'pl'
+    // }, function (t) {
+    //     $(document).i18n();
+    // });
+
+    $('.lang').click(function () {
+        //location.reload();
+        if (!lang) {
+        var lang = $(this).attr('data-lang');
+        localStorage.setItem('lang', lang);
+        }
+        else {
+        var lang = localStorage.getItem( 'lang' )
+        }
+        i18n.init({
+            lng: lang
+        }, function (t) {
+            $(document).i18n();
+        });
+    });
+   // })
+    
+    router.beforeEach(function () {
+     
+
+    
+  
     })
   }
 }

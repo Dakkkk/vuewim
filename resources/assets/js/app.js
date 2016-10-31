@@ -1,6 +1,7 @@
 module.exports = {
 
   ready: function () {
+          // this.translate(this.resources); 
 
     // this.$on('userHasLoggedOut', function () {
     //   this.destroyLogin()
@@ -9,50 +10,7 @@ module.exports = {
     // this.$on('userHasLoggedIn', function (user) {
     //   this.setLogin(user)
     // })
-
-    // // The app has just been initialized, check if we can get the user data with an already existing token
-    // var token = localStorage.getItem('jwt-token')
-    // if (token !== null && token !== 'undefined') {
-    //   var that = this
-    //   client({ path: '/users/me' }).then(
-    //     function (response) {
-    //       // User has successfully logged in using the token from storage
-    //       that.setLogin(response.entity.user)
-    //       // broadcast an event telling our children that the data is ready and views can be rendered
-    //       that.$broadcast('data-loaded')
-    //     },
-    //     function (response) {
-    //       // Login with our token failed, do some cleanup and redirect if we're on an authenticated route
-    //       that.destroyLogin()
-    //     }
-    //   )
-    // }
-    //$(document).ready(function () {
-        i18n.init({
-        "lng": 'pl',
-        "resStore": resources,
-        "fallbackLng" : 'pl'
-    }, function (t) {
-        $(document).i18n();
-    });
-
-    $('.lang').click(function () {
-        var lang = $(this).attr('data-lang');
-        i18n.init({
-            lng: lang
-        }, function (t) {
-            $(document).i18n();
-        });
-    });
-  },
-
-  resources: function () {
-     return {
-    //   user: null,
-    //   token: null,
-    //   authenticated: false
-    // }
-   
+      var resources = {
     "pl": {
         "translation": {
             "title": "Hejo!",
@@ -70,13 +28,84 @@ module.exports = {
             "welcome-p2": "Cooperation"
             
               
+            }
         }
     }
-  }
+
+    // $document.onload(function() {
+           i18n.init({
+        "lng": 'pl',
+        "resStore": resources,
+        "fallbackLng" : 'pl'
+    }, function (t) {
+        $(document).i18n();
+    });
+
+    $('.lang').click(function () {
+        //location.reload();
+        if (!lang) {
+        var lang = $(this).attr('data-lang');
+        localStorage.setItem('lang', lang);
+        }
+        else {
+        var lang = localStorage.getItem( 'lang' ) || 'pl'
+        }
+        i18n.init({
+            lng: lang
+        }, function (t) {
+            $(document).i18n();
+        });
+    });
+
+  },
+
+  resources: function () {
+  //    return {
+  //    "pl": {
+  //       "translation": {
+  //           "title": "Hejo!",
+  //           "welcome-title": "Witamy na stronie firmy Web In Mobile!",
+  //           "welcome-p1": "Witamy na stronie firmy Web In Mobile.",
+  //           "welcome-p2": "Zaparaszamy do współpracy!"
+               
+  //       }
+  //   },
+  //       "en": {
+  //       "translation": {
+  //           "title": "title of the page",
+  //           "welcome-title": "Welcome!",
+  //           "welcome-p1": "Witamy on the page of Web In Mobile.",
+  //           "welcome-p2": "Cooperation"
+            
+              
+  //           }
+  //       }
+   
+  
+  // }
      
   },
 
   methods: {
+    // translate: function (resources) {
+    //    i18n.init({
+    //     "lng": 'pl',
+    //     "resStore": resources,
+    //     "fallbackLng" : 'pl'
+    // }, function (t) {
+    //     $(document).i18n();
+    // });
+
+    // $('.lang').click(function () {
+    //     var lang = $(this).attr('data-lang');
+    //     i18n.init({
+    //         lng: lang
+    //     }, function (t) {
+    //         $(document).i18n();
+    //     });
+    // });
+    // }
+    
 
     // setLogin: function (user) {
     //   // Save login info in our data and set header in case it's not set already
