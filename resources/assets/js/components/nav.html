@@ -22,9 +22,10 @@
 			<!-- Right Side Of Navbar -->
 			<ul class="nav navbar-nav navbar-right">
 				<!-- Language -->
-				<li v-if=" ! $root.authenticated"><a v-link="{ path: '/auth/login' }">Polski</a></li>
-				<li v-if=" ! $root.authenticated"><a v-link="{ path: '/auth/register' }">English</a></li>
+				<li ><a class="lang" data-lang="pl">Polski</a></li>
+				<li ><a class="lang" data-lang="en">English</a></li>
 			</ul>
+          <div data-i18n="title"></div>
 		</div>
 	</div>
 </nav>
