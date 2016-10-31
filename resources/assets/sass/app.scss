@@ -120,6 +120,7 @@ body:not(*:root) {
 }
 
 .app-image {
+	animation: fadeIn 3.5s;
 	@media (max-width: $screen-min-width) {
 	  display: none;
 	}
