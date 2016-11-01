@@ -1,9 +1,16 @@
 .contact {
     overflow-y: auto !important;
-    .my-data {
-        font-size: 17px;
-        font-weight: 600;
-    }
+    .panel-body-content {
+        p {
+            display: inline-block;
+        }
+        .my-data {
+            display: inline-block;
+            font-size: 17px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+     }   
     .btn-email {
         :hover {
 	    animation: rubberBand 0.8s;

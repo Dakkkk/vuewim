@@ -3,36 +3,62 @@ var resources = {
         "translation": {
             "title": "Hejo!",
             "welcome-title": "Witamy na stronie firmy Web In Mobile!",
-            "about-title": "Czym się zajmujemy:",
             "welcome-p1": "Witamy na stronie firmy Web In Mobile.",
-            "welcome-p2": "Zaparaszamy do współpracy!"
+            "welcome-p2": "Zaparaszamy do współpracy!",
+            "about-title": "Czym się zajmujemy:",
+            "about-p1": "Tworzymy responsywne witryny i aplikacje internetowe.",
+            "about-p2": "Koncentrujemy się głównie na Single Page Applications.",
+            "about-p3": "Korzystamy następującuch technologii: HTML5, CSS3, Bootstrap, ES6, AngularJs, VieJs, jQuery, Gulp, Grunt, SASS, Git",
+            "main-title": "Strona główna",
+            "main-p1": "Zapraszamy do zapoznania się z naszą ofertą!",
+            "contact-title": "Kontakt",
+            "contact-p1": "Telefon:",
+            "contact-h4": "Formularz kontaktowy:",
+            "contact-label-title": "Tytuł",
+            "contact-label-message": "Wiadomość",
+
+
                
         }
     },
         "en": {
         "translation": {
             "title": "title of the page",
-            "welcome-title": "Welcome!",
+            "welcome-title": "Welcome to the Web In Mobile website!",
+            "welcome-p1": "Welcome on the page of Web In Mobile.",
+            "welcome-p2": "Welcome to cooperate!",
             "about-title": "What we do?",
-            "welcome-p1": "Witamy on the page of Web In Mobile.",
-            "welcome-p2": "Cooperation"
-            
-              
+            "about-p1": "We create responsive websites and applications.",
+            "about-p2": "We are mostly focusing on Single Page Applications.",
+            "about-p3": "We use the following technologies: HTML5, CSS3, Bootstrap, ES6, AngularJs, VieJs, jQuery, Gulp, Grunt, SASS, Git",
+            "main-title": "Main page",
+            "main-p1": "See our offer for more details!",
+            "contact-title": "Contact",
+            "contact-p1": "Phone number:",
+            "contact-h4": "Contact form",
+            "contact-label-title": "Title",
+            "contact-label-message": "Message",      
         }
     }
 };
 
-$(document).ready(function () {
-    i18n.init({
+   
+   // Start onlu if the SPA is ready
+var interval = setInterval(function() {
+    if(document.readyState === 'complete') {
+        clearInterval(interval);
+         $.i18n.init({
+        
         "lng": 'pl',
-        "resStore": resources,
+        "resStore": this.resources,
         "fallbackLng" : 'pl'
     }, function (t) {
         $(document).i18n();
+       
     });
-
-    $('.lang').click(function () {
-        //location.reload();
+    
+     $('.lang').click(function () {
+        
         if (!lang) {
           var lang = $(this).attr('data-lang');
         localStorage.setItem('lang', lang);
@@ -47,8 +73,7 @@ $(document).ready(function () {
         });
     });
         $('.app-location').click(function () {
-            setInterval(function(){
-        //location.reload();
+            setTimeout(function(){
         if (!lang) {
           var lang = $(this).attr('data-lang');
         localStorage.setItem('lang', lang);
@@ -63,5 +88,10 @@ $(document).ready(function () {
         });
         }, 200);
     });
+    }    
+}, 100);
+
+
    
-});
+    
+   
