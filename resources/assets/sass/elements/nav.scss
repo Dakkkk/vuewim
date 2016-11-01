@@ -60,6 +60,12 @@
 		margin-left: 17.5px;
 		animation: zoomInUp 3.75s;
 	}
+	.lang {
+		cursor: pointer;
+		:hover {
+		    background-color: rgba(215, 218, 217, 0.375);
+		}
+	}
 }
 
 .nav {

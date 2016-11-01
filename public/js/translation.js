@@ -1,7 +1,10 @@
 var resources = {
     "pl": {
         "translation": {
-            "title": "Hejo!",            
+            "title": "Hejo!",
+            "menu-1": "Witamy",
+            "menu-2": "O nas",
+            "menu-3": "Kontakt",         
             "welcome-heading": "Witamy",
             "welcome-title": "Witamy na stronie firmy Web In Mobile!",
             "welcome-p1": "Witamy na stronie firmy Web In Mobile.",
@@ -26,6 +29,9 @@ var resources = {
         "en": {
         "translation": {
             "title": "title of the page",
+            "menu-1": "Welcome",
+            "menu-2": "About us",
+            "menu-3": "Contact",
             "welcome-heading": "WELCOME",
             "welcome-title": "Welcome to the Web In Mobile website!",
             "welcome-p1": "Welcome on the page of Web In Mobile.",
