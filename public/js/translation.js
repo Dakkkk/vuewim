@@ -1,10 +1,12 @@
 var resources = {
     "pl": {
         "translation": {
-            "title": "Hejo!",
+            "title": "Hejo!",            
+            "welcome-heading": "Witamy",
             "welcome-title": "Witamy na stronie firmy Web In Mobile!",
             "welcome-p1": "Witamy na stronie firmy Web In Mobile.",
             "welcome-p2": "Zaparaszamy do współpracy!",
+            "about-heading": "O NAS",
             "about-title": "Czym się zajmujemy:",
             "about-p1": "Tworzymy responsywne witryny i aplikacje internetowe.",
             "about-p2": "Koncentrujemy się głównie na Single Page Applications.",
@@ -24,9 +26,11 @@ var resources = {
         "en": {
         "translation": {
             "title": "title of the page",
+            "welcome-heading": "WELCOME",
             "welcome-title": "Welcome to the Web In Mobile website!",
             "welcome-p1": "Welcome on the page of Web In Mobile.",
             "welcome-p2": "Welcome to cooperate!",
+            "about-heading": "ABOUT US",
             "about-title": "What we do?",
             "about-p1": "We create responsive websites and applications.",
             "about-p2": "We are mostly focusing on Single Page Applications.",
@@ -86,7 +90,7 @@ var interval = setInterval(function() {
         }, function (t) {
             $(document).i18n();
         });
-        }, 200);
+        }, 25);
     });
     }    
 }, 100);
