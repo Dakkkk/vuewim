@@ -23,7 +23,7 @@
         <!--    note that .prevent after :submit prevents the form from submiting via the action attribute -->
         <form id="contact_form"  v-on:submit.prevent="submitForm" action="mail.php" method="post">
             <div class="form-group">
-                <label for="title" data-i18n="contact-title">Tytuł</label>
+                <label for="title" data-i18n="contact-label-title">Tytuł</label>
                 <!-- v-model link to the model (i.e. pieces of the data section of vue.js) -->
                 <!-- v-on lets us run methods from vue.js : this one is v-on:blur for the blur event -->
                 <!--    blur just means that the field no longer has 'focus' -->
@@ -34,7 +34,7 @@
                 <input v-model="email" v-on:keyup="checkEmail" class="form-control form-email" name="email" type="email" />
             </div>
             <div class="form-group">
-                <label for="message" data-i18n="contact-message">Wiadomość <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
+                <label for="message" data-i18n="contact-label-message">Wiadomość <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
                 <textarea v-model="message" v-on:keyup="checkMessage" v-on:blur="checkIfFormValid"  class="form-control form-message" v-bind:class="[errorClass]" name="message"></textarea>
             </div>
             <button type="submit" v-bind:disabled="!checkIfFormValid"  class="btn btn-primary">Wyślij</button>
