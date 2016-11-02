@@ -23,6 +23,16 @@
    }
 }
 
-.nav-btn {
-	border-radius: 5px;
+.nav-btn, .collapsed {
+    border-radius: 5px;
+	background-color: rgba(173, 174, 175, 0.8) !important;
+	border: 1px solid #000 !important;
+	color: #2B5A84;
+	font-style: italic;
+	&:hover {
+		background-color: rgba(173, 174, 175, 0.3)!important;
+	}	
 }
+
+
+ 
