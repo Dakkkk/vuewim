@@ -22,6 +22,7 @@ var resources = {
             "contact-h4": "Formularz kontaktowy:",
             "contact-label-title": "Tytuł",
             "contact-label-message": "Wiadomość",
+            "contact-send": "Wyślij"
 
 
                
@@ -49,7 +50,8 @@ var resources = {
             "contact-p1": "Phone number:",
             "contact-h4": "Contact form",
             "contact-label-title": "Title",
-            "contact-label-message": "Message",      
+            "contact-label-message": "Message",
+            "contact-send": "Send"          
         }
     }
 };

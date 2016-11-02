@@ -37,7 +37,7 @@
                 <label for="message" data-i18n="contact-label-message">Wiadomość <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
                 <textarea v-model="message" v-on:keyup="checkMessage" v-on:blur="checkIfFormValid"  class="form-control form-message" v-bind:class="[errorClass]" name="message"></textarea>
             </div>
-            <button type="submit" v-bind:disabled="!checkIfFormValid"  class="btn btn-primary">Wyślij</button>
+            <button type="submit" v-bind:disabled="!checkIfFormValid"  class="btn btn-primary" data-i18n="contact-send">Wyślij</button>
             <span id="message-sent" class="hide">Wiadomość wysłana!</span>
             <span id="message-fail" class="hide">Bład serwera, spróbuj ponownie</span>
 
