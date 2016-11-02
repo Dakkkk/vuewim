@@ -18,16 +18,16 @@ $mail->SMTPAutoTLS = false;   //wyłączenie TLS
 $mail->SMTPSecure = '';    // 
 $mail->AddAddress ("dawidkunicki88@gmail.com","Dawid Kunicki");    //adres skrzynki e-mail oraz nazwa
                                                     //adresata, do którego trafi wiadomość
-// if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
-//     {                      
-//         //header('Location: http://webinmobile.eu'); //wyświetl ten komunikat
-//         echo 'Wszystko ok';
-//         }            
-//     else    //w przeciwnym wypadku
-//         {           
-//         //header('Location: http://webinmobile.eu');    //wyświetl następujący
-//         echo 'Nie wysłano';
-//         }
+if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
+    {                      
+        //header('Location: http://webinmobile.eu'); //wyświetl ten komunikat
+        echo 'Wszystko ok';
+        }            
+    else    //w przeciwnym wypadku
+        {           
+        //header('Location: http://webinmobile.eu');    //wyświetl następujący
+        echo 'Nie wysłano';
+        }
 
 // $to      = 'trzy.cztery@o2.pl';
 // $subject = $_POST['subject'];
