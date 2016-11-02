@@ -62,7 +62,10 @@
             max-width: 590px;
             max-height: 150px;
             @media (max-width: $mobile-max-width) {
-              max-width: 100%;
+              width: 100%;
+		    }
+            @media (max-width: $mobile-max-width + 100px) {
+              max-width: 145%;
 		    }
         }
         .text-danger {
